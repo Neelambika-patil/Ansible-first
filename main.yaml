@@ -1,0 +1,9 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Delete existing helm charts if any
+      file:
+        path: ~/text.conf
+        state: touch
+        mode: u=rw,g=r,o=r
